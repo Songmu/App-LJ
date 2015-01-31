@@ -104,7 +104,7 @@ __END__
 
 =head1 NAME
 
-App::LJ - It's new $module
+App::LJ - detect json and prettify it from log
 
 =head1 SYNOPSIS
 
@@ -112,7 +112,7 @@ App::LJ - It's new $module
 
 =head1 DESCRIPTION
 
-App::LJ is ...
+App::LJ is backend module of L<lj>.
 
 =head1 LICENSE
 
