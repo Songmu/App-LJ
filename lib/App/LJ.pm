@@ -91,7 +91,8 @@ sub _print_usage {
 
     print <<'...', $pretty , "\n";
 Usage:
-    % echo '{"key": "value", "array": [1,2,3]}' | lj [--no-color]'
+    % echo '2015-01-31 [21:06:22] json: {"key": "value", "array": [1,2,3]}' | lj [--no-color]'
+    2015-01-31 [21:06:22] json:
 ...
     exit;
 }
