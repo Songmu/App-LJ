@@ -1,0 +1,34 @@
+--- Color.pm
++++ Color.pm
+@@ -1,10 +1,9 @@
+ package JSON::Color;
+
+-use 5.010001;
+ use strict;
+ use warnings;
+
+-use Scalar::Util::LooksLikeNumber qw(looks_like_number);
++use Scalar::Util qw(looks_like_number);
+ use Term::ANSIColor qw(:constants);
+
+ # PUSHCOLOR and LOCALCOLOR cannot be used, they are functions, not escape codes
+@@ -170,7 +169,7 @@ sub _encode {
+     } elsif ($ref eq 'JSON::XS::Boolean' || $ref eq 'JSON::PP::Boolean') {
+         return _bool($data, $opts);
+     } elsif (!$ref) {
+-        if (looks_like_number($data) =~ /^(4|12|4352|8704)$/o) {
++        if (looks_like_number($data)) {
+             return _number($data, $opts);
+         } else {
+             return _string($data, $opts);
+@@ -182,8 +181,8 @@ sub _encode {
+
+ sub encode_json {
+     my ($value, $opts) = @_;
+-    $opts //= {};
++    $opts ||= {};
+-    $opts->{_indent} //= 0;
++    $opts->{_indent} ||= 0;
+     my $res = _encode($value , $opts);
+
+     if ($opts->{linum}) {

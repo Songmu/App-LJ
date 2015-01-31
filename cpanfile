@@ -1,4 +1,4 @@
-requires 'JSON';
+requires 'JSON::XS';
 requires 'JSON::Color';
 requires 'perl', '5.008001';
 

@@ -5,12 +5,12 @@ use warnings;
 
 our $VERSION = "0.01";
 
-use JSON ();
+use JSON::XS ();
 use JSON::Color ();
 
 my $_coder;
 sub _coder {
-    $_coder ||= JSON->new->pretty(1);
+    $_coder ||= JSON::XS->new->pretty(1);
 }
 
 sub new_with_options {
