@@ -1,14 +1,32 @@
+[![Build Status](https://travis-ci.org/Songmu/App-LJ.svg?branch=master)](https://travis-ci.org/Songmu/App-LJ)
 # NAME
 
-App::LJ - It's new $module
+lj - detect json from logfile and prettify it
 
 # SYNOPSIS
 
-    use App::LJ;
+    % echo '2015-01-31 [21:06:22] json: {"key": "value", "array": [1,2,3]}' | lj [--no-color]'
+    2015-01-31 [21:06:22] json:
+    {
+       "array": [
+          1,
+          2,
+          3
+       ],
+       "key": "value"
+    }
 
 # DESCRIPTION
 
-App::LJ is ...
+[lj](https://metacpan.org/pod/lj) is command line utility for prettify the log containing JSON.
+
+# INSTALLATION
+
+    % cpanm App::LJ
+
+or you can get single packed executable file.
+
+    % curl -L https://raw.githubusercontent.com/Songmu/App-LJ/master/lj > /usr/local/bin/lj; chmod +x /usr/local/bin/lj
 
 # LICENSE
 

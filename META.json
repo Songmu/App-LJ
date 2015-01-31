@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "detect json and prettify it from log",
    "author" : [
       "Songmu <y.songmu@gmail.com>"
    ],
@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "JSON::Color" : "0",
+            "JSON::XS" : "0",
             "perl" : "5.008001"
          }
       },
@@ -52,6 +54,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/Songmu/App-LJ/issues"
+      },
+      "homepage" : "https://github.com/Songmu/App-LJ",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Songmu/App-LJ.git",
+         "web" : "https://github.com/Songmu/App-LJ"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:SONGMU"
 }
