@@ -52,7 +52,7 @@ sub _pretty_print {
     my ($self, $json) = @_;
 
     ($self->{printer} ||= do {
-        !$self->{color} ? sub { $_coder->encode(shift) } : sub { JSON::Color::encode_json(shift, {pretty => 1}) }
+        !$self->{color} ? sub { chomp(my $l = $_coder->encode(shift)); $l} : sub { JSON::Color::encode_json(shift, {pretty => 1}) }
     })->($json);
 }
 
