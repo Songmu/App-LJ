@@ -65,7 +65,7 @@ sub _process_line {
     my ($self, $line) = @_;
     chomp $line;
 
-    if ($line =~ /\s*\{.*\}\s*/) {
+    if ($line =~ /\s*\[?\{.*\}\]?\s*/) {
         my $pre = $`;
         my $maybe_json = $&;
         my $post = $';

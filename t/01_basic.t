@@ -15,4 +15,14 @@ is $lj->_process_line('2015-01-31 [21:06:22] +0900 keylogger: {"app":"Terminal"}
 is $lj->_process_line('2015-01-31 [21:06:22] +0900 keylogger:'), '2015-01-31 [21:06:22] +0900 keylogger:';
 is $lj->_process_line('2015-01-31 {21:06:22} +0900 keylogger:'), '2015-01-31 {21:06:22} +0900 keylogger:';
 
+is $lj->_process_line('2015-01-31 [21:06:22] +0900 keylogger: [{"app":"Terminal"},{"app":"Vim"}]'), '2015-01-31 [21:06:22] +0900 keylogger:
+[
+   {
+      "app" : "Terminal"
+   },
+   {
+      "app" : "Vim"
+   }
+]';
+
 done_testing;
