@@ -4,7 +4,7 @@
       "Songmu <y.songmu@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v2.3.0, CPAN::Meta::Converter version 2.142060",
+   "generated_by" : "Minilla/v2.3.0, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -33,6 +33,7 @@
       },
       "develop" : {
          "requires" : {
+            "App::FatPacker::Simple" : "0",
             "Test::CPAN::Meta" : "0",
             "Test::MinimumVersion::Fast" : "0.04",
             "Test::PAUSE::Permissions" : "0.04",
@@ -65,6 +66,6 @@
          "web" : "https://github.com/Songmu/App-LJ"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_authority" : "cpan:SONGMU"
 }
